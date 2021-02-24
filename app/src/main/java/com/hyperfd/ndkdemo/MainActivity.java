@@ -1,38 +1,22 @@
 package com.hyperfd.ndkdemo;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Context;
-import android.content.Intent;
-import android.location.Location;
 import android.os.Bundle;
-import android.text.TextUtils;
-import android.util.Log;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.bumptech.glide.request.FutureTarget;
-import com.bumptech.glide.request.RequestOptions;
-import com.bumptech.glide.request.target.Target;
+import com.hyperfd.architecture.BaseActivity;
+import com.kunminx.architecture.ui.page.DataBindingConfig;
 
-import java.io.File;
-import java.util.concurrent.BlockingDeque;
-import java.util.concurrent.ThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
+public class MainActivity extends BaseActivity {
 
-import static java.lang.Math.PI;
 
-public class MainActivity extends AppCompatActivity {
+    @Override
+    protected void initViewModel() {
 
-    // Used to load the 'native-lib' library on application startup.
-    static {
-        System.loadLibrary("native-lib");
     }
 
+    @Override
+    protected DataBindingConfig getDataBindingConfig() {
+        return null;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,16 +27,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    /**
-     * A native method that is implemented by the 'native-lib' native library,
-     * which is packaged with this application.
-     */
-    public native String stringFromJNI();
 
-    public native String stringFromText() throws IllegalArgumentException;
-
-    private void callNullPointException() throws NullPointerException {
-        throw new NullPointerException("MainActivity NullPointException");
-    }
 
 }

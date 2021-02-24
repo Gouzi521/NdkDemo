@@ -1,0 +1,42 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        minSdkVersion 22
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    api 'androidx.appcompat:appcompat:1.2.0'
+
+    api 'androidx.lifecycle:lifecycle-runtime:2.2.0'
+    api 'androidx.lifecycle:lifecycle-common-java8:2.2.0'
+    api 'androidx.lifecycle:lifecycle-viewmodel:2.2.0'
+    api 'androidx.lifecycle:lifecycle-livedata:2.2.0'
+    api 'androidx.navigation:navigation-runtime:2.3.2'
+
+    api 'com.kunminx.archi:unpeek-livedata:4.4.1-beta1'
+    api 'com.kunminx.archi:smooth-navigation:3.3.2-beta5'
+    api 'com.kunminx.archi:strict-databinding:3.6.2-beta1'
+    api 'com.kunminx.archi:domain:1.1.0'
+}
