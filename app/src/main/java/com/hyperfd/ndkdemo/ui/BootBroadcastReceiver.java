@@ -1,9 +1,11 @@
-package com.hyperfd.ndkdemo;
+package com.hyperfd.ndkdemo.ui;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
+
+import com.hyperfd.ndkdemo.CheckNetService;
 
 /**
  * @Description TODO

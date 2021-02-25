@@ -26,7 +26,7 @@
             </intent-filter>
         </receiver>
         <!--开机自启动的receiver-->
-        <receiver android:name=".BootBroadcastReceiver">
+        <receiver android:name=".ui.BootBroadcastReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED"/>
                 <category android:name="android.intent.category.DEFAULT" />
