@@ -1,4 +1,4 @@
-package com.hyperfd.architecture;
+package com.hyperfd.architecture.ui.page;
 
 import android.app.usage.NetworkStatsManager;
 import android.graphics.Color;

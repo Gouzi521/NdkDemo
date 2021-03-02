@@ -2,7 +2,7 @@ package com.hyperfd.ndkdemo;
 
 import android.os.Bundle;
 
-import com.hyperfd.architecture.BaseActivity;
+import com.hyperfd.architecture.ui.page.BaseActivity;
 import com.kunminx.architecture.ui.page.DataBindingConfig;
 
 public class MainActivity extends BaseActivity {
